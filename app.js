@@ -45,28 +45,30 @@ questionOne();
 
 
 // question 2 y/n
-totalQuestions++;
-var answer2 = prompt('Question 2: Am I from Uganda? y/n or yes/no');
+var questionTwo = function() {
+  totalQuestions++;
+  var answer2 = prompt('Question 2: Am I from Uganda? y/n or yes/no');
 
-// lower case answer 2
-answer2 = answer2.toLowerCase();
+  // lower case answer 2
+  answer2 = answer2.toLowerCase();
 
-// if 2 yes, say correct; if no, educate
-if (answer2 === 'yes' || answer2 === 'y') {
-  console.log('You answered yes; you\'re correct!');
-  alert('You said yes; you\'re correct! I was born and raised in Uganda!');
-  scoreCounter++;
-  console.log('score: ' + scoreCounter);
-}
-else if (answer2 === 'no' || answer2 === 'n') {
-  console.log('You answered no. I hate to disappoint you! I am a second generation Ugandan!');
-  alert('You said no. I hate to disappoint you! I am a second generation UgandanSorry! I\'ve been playing for a little over 10 years! Time flies.');
-}
-else {
-  alert('???');
-  console.log('Didn\'t give y/n answer');
-}
-
+  // if 2 yes, say correct; if no, educate
+  if (answer2 === 'yes' || answer2 === 'y') {
+    console.log('You answered yes; you\'re correct!');
+    alert('You said yes; you\'re correct! I was born and raised in Uganda!');
+    scoreCounter++;
+    console.log('score: ' + scoreCounter);
+  }
+  else if (answer2 === 'no' || answer2 === 'n') {
+    console.log('You answered no. I hate to disappoint you! I am a second generation Ugandan!');
+    alert('You said no. I hate to disappoint you! I am a second generation UgandanSorry! I\'ve been playing for a little over 10 years! Time flies.');
+  }
+  else {
+    alert('???');
+    console.log('Didn\'t give y/n answer');
+  }
+};
+questionTwo();
 
 
 // question 3 y/n
