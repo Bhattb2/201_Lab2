@@ -128,27 +128,31 @@ questionFour();
 
 
 // question 5 y/n
-totalQuestions++;
-var answer5 = prompt('Question 5: Do I love the show Breaking Bad?y/n or yes/no');
+var questionFive = function() {
+  totalQuestions++;
+  var answer5 = prompt('Question 5: Do I love the show Breaking Bad?y/n or yes/no');
 
-// lower case answer 5
-answer5 = answer5.toLowerCase();
+  // lower case answer 5
+  answer5 = answer5.toLowerCase();
 
-// if 5 yes, correct; if no, educate
-if (answer5 === 'yes' || answer5 === 'y') {
-  console.log('Replied yes');
-  alert('You replied yes. Correct! No more half measures, Walter.');
-  scoreCounter++;
-  console.log('score: ' + scoreCounter);
-}
-else if (answer5 === 'no' || answer5 === 'n') {
-  console.log('Replied no');
-  alert('You replied no. Wrong! Best show ever, man.');
-}
-else {
-  console.log('didn\'t give y/n answer');
-  alert('???');
-}
+  // if 5 yes, correct; if no, educate
+  if (answer5 === 'yes' || answer5 === 'y') {
+    console.log('Replied yes');
+    alert('You replied yes. Correct! No more half measures, Walter.');
+    scoreCounter++;
+    console.log('score: ' + scoreCounter);
+  }
+  else if (answer5 === 'no' || answer5 === 'n') {
+    console.log('Replied no');
+    alert('You replied no. Wrong! Best show ever, man.');
+  }
+  else {
+    console.log('didn\'t give y/n answer');
+    alert('???');
+  }
+};
+questionFive();
+
 
 // final message
 console.log('final message');
