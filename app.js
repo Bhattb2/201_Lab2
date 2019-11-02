@@ -72,27 +72,30 @@ questionTwo();
 
 
 // question 3 y/n
-totalQuestions++;
-var answer3 = prompt('Question 3: Did I go to the University of Oregon? y/n or yes/no');
+var questionThree = function() {
+  totalQuestions++;
+  var answer3 = prompt('Question 3: Did I go to the University of Oregon? y/n or yes/no');
 
-// lower case answer 3
-answer3 = answer3.toLowerCase();
+  // lower case answer 3
+  answer3 = answer3.toLowerCase();
 
-// if 3 yes, educate; if no, correct
-if (answer3 === 'yes' || answer3 === 'y') {
-  console.log('You replied yes. WRONG - $*%& the Ducks!!! I went to the University of Washington. GO HUSKIES!');
-  alert('You replied yes. WRONG - $*%& the Ducks!!! I went to the University of Washington. GO HUSKIES!');
-}
-else if (answer3 === 'no' || answer3 === 'n') {
-  console.log('You replied no. Correct! Go Huskies!');
-  alert('You replied no. Correct! Go Huskies!');
-  scoreCounter++;
-  console.log('score: ' + scoreCounter);
-}
-else {
-  console.log('Didn\'t give y/n answer');
-  alert('???');
-}
+  // if 3 yes, educate; if no, correct
+  if (answer3 === 'yes' || answer3 === 'y') {
+    console.log('You replied yes. WRONG - $*%& the Ducks!!! I went to the University of Washington. GO HUSKIES!');
+    alert('You replied yes. WRONG - $*%& the Ducks!!! I went to the University of Washington. GO HUSKIES!');
+  }
+  else if (answer3 === 'no' || answer3 === 'n') {
+    console.log('You replied no. Correct! Go Huskies!');
+    alert('You replied no. Correct! Go Huskies!');
+    scoreCounter++;
+    console.log('score: ' + scoreCounter);
+  }
+  else {
+    console.log('Didn\'t give y/n answer');
+    alert('???');
+  }
+};
+questionThree();
 
 
 
