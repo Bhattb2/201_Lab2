@@ -100,27 +100,30 @@ questionThree();
 
 
 // question 4 y/n
-totalQuestions++;
-var answer4 = prompt('Question 4: Do I have a younger brother? y/n or yes/no');
+var questionFour = function() {
+  totalQuestions++;
+  var answer4 = prompt('Question 4: Do I have a younger brother? y/n or yes/no');
 
-// lower case answer 4
-answer4 = answer4.toLowerCase();
+  // lower case answer 4
+  answer4 = answer4.toLowerCase();
 
-// if 4 yes, correct; if no, educate
-if (answer4 === 'yes' || answer4 === 'y') {
-  console.log('You replied yes. Correct! We are a 10 year difference.');
-  alert('You replied yes. Correct! We are a 10 year difference.');
-  scoreCounter++;
-  console.log('score: ' + scoreCounter);
-}
-else if (answer4 === 'no' || answer4 === 'n') {
-  console.log('You replied no. Wrong - he\'s younger by 10 years.');
-  alert('You replied no. Wrong - he\'s younger by 10 years.');
-}
-else {
-  console.log('didn\'t give y/n answer');
-  alert('???');
-}
+  // if 4 yes, correct; if no, educate
+  if (answer4 === 'yes' || answer4 === 'y') {
+    console.log('You replied yes. Correct! We are a 10 year difference.');
+    alert('You replied yes. Correct! We are a 10 year difference.');
+    scoreCounter++;
+    console.log('score: ' + scoreCounter);
+  }
+  else if (answer4 === 'no' || answer4 === 'n') {
+    console.log('You replied no. Wrong - he\'s younger by 10 years.');
+    alert('You replied no. Wrong - he\'s younger by 10 years.');
+  }
+  else {
+    console.log('didn\'t give y/n answer');
+    alert('???');
+  }
+};
+questionFour();
 
 
 
