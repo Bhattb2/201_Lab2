@@ -1,11 +1,5 @@
 'use strict';
 
-// week 1 day 2
-// personalized welcome message to user from me - done
-// prompt user for 5 yes/no questions
-// user must respond y/n yes/no
-// alert user with response they provided
-// display name back to user, display name back to user in final message to them
 
 // global variable score counter; increment only for correct answers
 var scoreCounter = 0;
@@ -13,32 +7,33 @@ var scoreCounter = 0;
 // global variable total questions; increment only for every question asked
 var totalQuestions = 0;
 
-// ask for name
+// ask name
 var name = prompt("Tell me your name, please.");
 console.log("name: " + name);
 
 // personalized welcome to user from me, includes question 1 y/n
 totalQuestions++;
-var answer1 = prompt("Thank you. Welcome to my site, " + name + "! I am Bhagirath. Do you mind of I ask you a few questions. Each correct answer is worth points! Ready? Question 1:  Ready to begin? Answer y/n or yes/no");
+var answer1 = prompt("Thank you. Welcome to my site, " + name + "! I am Bhagirath. Do you mind if I ask you a few questions. Each correct answer is worth points! Ready? Question 1:  Ready to begin? Answer y/n or yes/no");
 
 // lower case answer 1
 answer1 = answer1.toLowerCase();
 
 // if yes, positive message; if no, too bad message
 if (answer1 === "yes" || answer1 === "y") {
-  console.log("You replied yes. So you DO mind?");
-  alert("You replied yes. So you DO mind?");
+  console.log("You answered yes. So you ARE ready to begin?");
+  alert("You answered yes. So you ARE ready to begin?");
 }
 else if (answer1 === "no" || answer1 === "n") {
-  console.log("You replied no; you don't mind. Let's begin!");
-  alert("You replied no; you didn't mind. Okay then let's get started!");
+  console.log("You replied no; so you don't mind. Let's begin!");
+  alert("You replied no; so you don't mind. Okay, then let's get started!");
   scoreCounter++;
   console.log("score: " + scoreCounter);
 }
 else {
   console.log("No answer -  y/n answer");
-  alert("That is not optional! I'm still going to ask you the questions. >:) ");
+  alert("That is not optional! I'm still going to ask you the questions. :~)!!!");
 }
+
 
 
 
@@ -58,10 +53,10 @@ if (answer2 === "yes" || answer2 === "y") {
 }
 else if (answer2 === "no" || answer2 === "n") {
   console.log("You answered no. I hate to disappoint you! I am a second generation Ugandan!");
-  alert("You said no. I hate to disappoint you! I am a second generation UgandanSorry! I've been playing for a little over 10 years! Time flies.");
+  alert("You said no. I hate to disappoint you! I am a second generation Ugandan");
 }
 else {
-  alert("???");
+  alert("Should have guessed!");
   console.log("Didn't give y/n answer");
 }
 
@@ -69,57 +64,61 @@ else {
 
 // question 3 y/n
 totalQuestions++;
-var answer3 = prompt("Question 3: Did I go to the University of Oregon? y/n or yes/no");
+var answer3 = prompt("Question 3: Did I serve in the military? y/n or yes/no");
 
 // lower case answer 3
 answer3 = answer3.toLowerCase();
 
 // if 3 yes, educate; if no, correct
 if (answer3 === "yes" || answer3 === "y") {
-  console.log("You replied yes. WRONG - $*%& the Ducks!!! I went to the University of Washington. GO HUSKIES!");
-  alert("You replied yes. WRONG - $*%& the Ducks!!! I went to the University of Washington. GO HUSKIES!");
+  console.log("You answered yes. Correct!!! I honorably served in the U S Air Force!");
+  alert("You answered yes. Correct - I honorably served in the U S Air Force!");
 }
 else if (answer3 === "no" || answer3 === "n") {
-  console.log("You replied no. Correct! Go Huskies!");
-  alert("You replied no. Correct! Go Huskies!");
+  console.log("You answered no. WRONG! It was an honor to serve!!!!");
+  alert("You answered no. WRONG! It was an honor to serve!!!");
   scoreCounter++;
   console.log("score: " + scoreCounter);
 }
 else {
   console.log("Didn't give y/n answer");
-  alert("???");
+  alert("Not even a guess?!");
 }
+
+
 
 
 
 // question 4 y/n
 totalQuestions++;
-var answer4 = prompt("Question 4: Do I have a younger brother? y/n or yes/no");
+var answer4 = prompt("Question 4: Am I the first in my family to serve in the Armed Forces? y/n or yes/no");
 
 // lower case answer 4
 answer4 = answer4.toLowerCase();
 
 // if 4 yes, correct; if no, educate
 if (answer4 === "yes" || answer4 === "y") {
-  console.log("You replied yes. Correct! We are a 10 year difference.");
-  alert("You replied yes. Correct! We are a 10 year difference.");
+  console.log("You said yes. YOU ARE CORRECT! I am the first one to serve in the military.");
+  alert("You said yes. YOU ARE CORRECT! I am the first one to serve in the military.");
   scoreCounter++;
   console.log("score: " + scoreCounter);
 }
 else if (answer4 === "no" || answer4 === "n") {
-  console.log("You replied no. Wrong - he's younger by 10 years.");
-  alert("You replied no. Wrong - he's younger by 10 years.");
+  console.log("You answered no. You are Wrong - I was a career military man.");
+  alert("You answered no. You are Wrong - I was a career military man.");
 }
 else {
-  console.log("didn't give y/n answer");
-  alert("???");
+  console.log("Didn't give y/n answer");
+  alert("Why didn't you guess?");
 }
+
+
 
 
 
 // question 5 y/n
 totalQuestions++;
-var answer5 = prompt("Question 5: Do I love the show Breaking Bad?y/n or yes/no");
+var answer5 = prompt("Question 5: Am I a foodie? y/n or yes/no");
 
 // lower case answer 5
 answer5 = answer5.toLowerCase();
@@ -127,33 +126,34 @@ answer5 = answer5.toLowerCase();
 // if 5 yes, correct; if no, educate
 if (answer5 === "yes" || answer5 === "y") {
   console.log("Replied yes");
-  alert("You replied yes. Correct! No more half measures, Walter.");
+  alert("You answered yes. CORRECT! I love trying foods from different cultures - yummy!");
   scoreCounter++;
   console.log("score: " + scoreCounter);
 }
 else if (answer5 === "no" || answer5 === "n") {
   console.log("Replied no");
-  alert("You replied no. Wrong! Best show ever, man.");
+  alert("You answered no. Wrong! Love to eat delicious, tasty food.");
 }
 else {
-  console.log("didn't give y/n answer");
-  alert("???");
+  console.log("Didn't give y/n answer");
+  alert("Should have taken a stab at it!");
 }
 
-// final message
-console.log("final message");
-alert("Thanks for answering (or not answering) my questions, " + name + "! Enjoy my website.");
 
 
 
 
+// last message
+console.log("last word");
+alert("Thank you for participating in my questionnaire, whether you answered questions or not, " + name + "! Have fun on the website.");
 
-// week 1 day 3
+
+
 
 
 // 6th question:
 // while input is not numeric input, prompt user for numeric input
-// 4 guesses allowed
+// 4 guesses permitted
 // if guess incorrect, alert must say too high or too low
 // after attempts exhausted, tell user correct answer
 
@@ -162,7 +162,7 @@ alert("Thanks for answering (or not answering) my questions, " + name + "! Enjoy
 
 
 
-alert("Wait, I almost forgot! Time for some guessing games! >:) Question 6: You have 4 guesses to guess a number from a random number generator.")
+alert(" Hold on, nearly slipped my mind! Time to play the guessing game! >:) Question 6: You have 4 chances to guess a number from a random number generator.")
 totalQuestions++;
 
 
@@ -187,7 +187,7 @@ function numberGuesser() {
   do {
 
     // prompt for input
-    guessNumber = prompt("Take your guess! 1-10 only");
+    guessNumber = prompt("Pick a number between 1-10");
 
     // convert number to integer
     guessNumber = parseInt(guessNumber);
@@ -211,14 +211,14 @@ function numberGuesser() {
     }
     // correct
     else {
-      alert("NICE GUESS!!! It was " + guessNumber + ". 5 points to Gryffindor!!");
+      alert("GOOD GUESS!!! T'was " + guessNumber + ". 5 points for team!!");
       scoreCounter++;
       console.log("score: " + scoreCounter);
       break;
     }
 
     if (guessesLeft === 0) {
-      alert("Sorry! Out of guesses. The correct number is " + correctNumber);
+      alert("Sorry! No more guesses. The correct number is " + correctNumber);
       break;
     }
 
@@ -234,7 +234,7 @@ numberGuesser();
 
 
 
-alert("Glad you got that out of the way, huh? Time for one last game.");
+alert("Happy to get that over with? How about one last game.");
 
 function musicGuesser() {
   // 7th question:
@@ -243,11 +243,11 @@ function musicGuesser() {
   // ends when user guesses correct answer or if run out of attempts
   // after, display all correct answers
 
-  alert("Question 7: This time, you're going to guess one of my top 10 favorite bands/artists.");
+  alert("Question 7: For this, you'll try to guess one of my top 10 bands/musicians.");
   totalQuestions++;
 
   // initialize array of bands, guesses left, and flag to break out
-  var favoriteBandsList = ["The Beatles", "Jimi Hendrix", "Led Zeppelin", "Van Halen", "Queen", "Eric Clapton", "Tame Impala", "Elton John", "Billy Joel", "Muse"];
+  var favoriteBandsList = ["The Beatles", "B B King", "Kishore Kumar", "Lata Mangeshkar", "Cream - Eric Clapton", "The Allman Brothers", "Queen - Freddie Mercury", "David Sanborn", "Lynyrd Skynyrd", "Grand Funk Railroad"];
 
   // 6 guesses
   var bandGuessesLeft = 6;
@@ -264,7 +264,7 @@ function musicGuesser() {
   do {
 
     // prompt for favorite band
-    var guessBand = prompt("What's one of my favorite bands/artists? " + bandGuessesLeft + " guesses remaining. Capitalization and formatting matter!");
+    var guessBand = prompt("What/who is one of my top 10 bands/musicians? " + bandGuessesLeft + " guesses remaining. Capitalization and formatting matter!");
     console.log("guessed band name: " + guessBand);
 
     // lowercase input string for checking answer
@@ -288,7 +288,7 @@ function musicGuesser() {
         correctGuessExit = true;
         console.log("response correct: flag changed to " + correctGuessExit);
 
-        alert("NICE! I love " + favoriteBandsList[i] + ". Rock on!");
+        alert("WELL DONE!" + favoriteBandsList[i] + ". Rock on!");
         console.log("array match: " + favoriteBandsList[i]);
 
         scoreCounter++;
@@ -311,16 +311,16 @@ function musicGuesser() {
 
       // if guesses > 0, redo the loop
       if (bandGuessesLeft !== 0) {
-        alert("Nope, try again!");
+        alert("Nope, guess again!");
 
-        console.log("guesses left nope try again: " + bandGuessesLeft);
+        console.log("guesses left nope guess again: " + bandGuessesLeft);
       }
 
       // if out of guesses, break out of loop
       if (bandGuessesLeft === 0) {
-        alert("Sorry, out of guesses!");
+        alert("Too bad, no more guesses!");
 
-        console.log("guesses left sorry out of guesses: " + bandGuessesLeft);
+        console.log("guesses left too bad no more guesses: " + bandGuessesLeft);
         break;
       }
 
@@ -364,7 +364,7 @@ function musicGuesser() {
       continue;
     }
   }
-  alert("My 10 favorite bands are: " + listOfBandsSoFar);
+  alert("My Top 10 Bands/Musicians: " + listOfBandsSoFar);
 }
 
 musicGuesser();
@@ -375,5 +375,5 @@ musicGuesser();
 
 
 // display points earned out of total points
-alert("You got " + scoreCounter + "/" + totalQuestions + " right.");
+alert("You earned " + scoreCounter + "/" + totalQuestions + " right.");
 console.log("score: " + scoreCounter + "/" + totalQuestions); 
