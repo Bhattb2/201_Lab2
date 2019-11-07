@@ -12,6 +12,7 @@ var name = prompt("Tell me your name, please.");
 console.log("name: " + name);
 
 // personalized welcome to user from me, includes question 1 y/n
+var questionOne = function() {
 totalQuestions++;
 var answer1 = prompt("Thank you. Welcome to my site, " + name + "! I am Bhagirath. Do you mind if I ask you a few questions. Each correct answer is worth points! Ready? Question 1:  Ready to begin? Answer y/n or yes/no");
 
@@ -25,7 +26,7 @@ if (answer1 === "yes" || answer1 === "y") {
 }
 else if (answer1 === "no" || answer1 === "n") {
   console.log("You replied no; so you don't mind. Let's begin!");
-  alert("You replied no; so you don't mind. Okay, then let's get started!");
+  alert("You replied no; so you don't mind. Okay, then let's begin!");
   scoreCounter++;
   console.log("score: " + scoreCounter);
 }
@@ -33,23 +34,7 @@ else {
   console.log("No answer -  y/n answer");
   alert("That is not optional! I'm still going to ask you the questions. :~)!!!");
 }
-
-  // if yes, positive message; if no, too bad message
-  if (answer1 === 'yes' || answer1 === 'y') {
-    console.log('You replied yes. So you DO mind?');
-    alert('You replied yes. So you DO mind?');
-  }
-  else if (answer1 === 'no' || answer1 === 'n') {
-    console.log('You replied no; you don\'t mind. Let\'s begin!');
-    alert('You replied no; you didn\'t mind. Okay then let\'s get started!');
-    scoreCounter++;
-    console.log('score: ' + scoreCounter);
-  }
-  else {
-    console.log('No answer -  y/n answer');
-    alert('That is not optional! I\'m still going to ask you the questions. >:) ');
-  }
-};
+}
 questionOne();
 
 
@@ -58,7 +43,10 @@ questionOne();
 // question 2 y/n
 var questionTwo = function() {
   totalQuestions++;
-  var answer2 = prompt('Question 2: Am I from Uganda? y/n or yes/no');
+  var answer2 = prompt("Question 2: Am I from Uganda? y/n or yes/no");
+
+// lower case answer 2
+answer2 = answer2.toLowerCase();  
 
 // if 2 yes, say correct; if no, educate
 if (answer2 === "yes" || answer2 === "y") {
@@ -75,29 +63,14 @@ else {
   alert("Should have guessed!");
   console.log("Didn't give y/n answer");
 }
-
-  // if 2 yes, say correct; if no, educate
-  if (answer2 === 'yes' || answer2 === 'y') {
-    console.log('You answered yes; you\'re correct!');
-    alert('You said yes; you\'re correct! I was born and raised in Uganda!');
-    scoreCounter++;
-    console.log('score: ' + scoreCounter);
-  }
-  else if (answer2 === 'no' || answer2 === 'n') {
-    console.log('You answered no. I hate to disappoint you! I am a second generation Ugandan!');
-    alert('You said no. I hate to disappoint you! I am a second generation UgandanSorry! I\'ve been playing for a little over 10 years! Time flies.');
-  }
-  else {
-    alert('???');
-    console.log('Didn\'t give y/n answer');
-  }
-};
+}
 questionTwo();
 
 
 
 
 // question 3 y/n
+var questionThree = function() {
 totalQuestions++;
 var answer3 = prompt("Question 3: Did I serve in the military? y/n or yes/no");
 
@@ -119,11 +92,14 @@ else {
   console.log("Didn't give y/n answer");
   alert("Not even a guess?!");
 }
+}
+questionThree();
 
 
 
 
 // question 4 y/n
+var questionFour = function() {
 totalQuestions++;
 var answer4 = prompt("Question 4: Am I the first in my family to serve in the Armed Forces? y/n or yes/no");
 
@@ -145,34 +121,20 @@ else {
   console.log("Didn't give y/n answer");
   alert("Why didn't you guess?");
 }
+}
+questionFour();
 
 
 
 
 // question 5 y/n
+var questionFive = function() {
 totalQuestions++;
 var answer5 = prompt("Question 5: Am I a foodie? y/n or yes/no");
 
   // lower case answer 5
   answer5 = answer5.toLowerCase();
 
-  // if 5 yes, correct; if no, educate
-  if (answer5 === 'yes' || answer5 === 'y') {
-    console.log('Replied yes');
-    alert('You replied yes. Correct! No more half measures, Walter.');
-    scoreCounter++;
-    console.log('score: ' + scoreCounter);
-  }
-  else if (answer5 === 'no' || answer5 === 'n') {
-    console.log('Replied no');
-    alert('You replied no. Wrong! Best show ever, man.');
-  }
-  else {
-    console.log('didn\'t give y/n answer');
-    alert('???');
-  }
-};
-questionFive();
 
 // if 5 yes, correct; if no, educate
 if (answer5 === "yes" || answer5 === "y") {
@@ -189,6 +151,8 @@ else {
   console.log("Didn't give y/n answer");
   alert("Should have taken a stab at it!");
 }
+}
+questionFive();
 
 
 
@@ -211,7 +175,7 @@ alert("Thank you for participating in my questionnaire, whether you answered que
 
 
 
-alert(" Hold on, nearly slipped my mind! Time to play the guessing game! >:) Question 6: You have 4 chances to guess a number from a random number generator.")
+alert(" Hold on, nearly slipped my mind! Time to play the guessing game! :~) Question 6: You have 4 attempts to guess a number from a random number generator.")
 totalQuestions++;
 
 
@@ -227,9 +191,9 @@ function numberGuesser() {
   // generate random float, multiply by 10, and round down to generate random number
 
   var randomNumberZeroToOne = Math.random();
-  console.log('Random number 0-1 generated: ' + randomNumberZeroToOne);
+  console.log("Random number 0-1 generated: " + randomNumberZeroToOne);
   correctNumber = Math.ceil((10 * (randomNumberZeroToOne)));
-  console.log('Correct number: ' + correctNumber);
+  console.log("Correct number: " + correctNumber);
 
   // prompt user at least once for a guess
   do {
@@ -259,7 +223,7 @@ function numberGuesser() {
     }
     // correct
     else {
-      alert("GOOD GUESS!!! T'was " + guessNumber + ". 5 points for team!!");
+      alert("GOOD GUESS!!! T'was " + guessNumber + ". 5 points for Gipper!!");
       scoreCounter++;
       console.log('score: ' + scoreCounter);
       break;
@@ -287,7 +251,7 @@ function musicGuesser() {
   // ends when user guesses correct answer or if run out of attempts
   // after, display all correct answers
 
-  alert("Question 7: For this, you'll try to guess one of my top 10 bands/musicians.");
+  alert("Question 7: For this, you'll venture to guess one of my top 10 bands/musicians.");
   totalQuestions++;
 
   // initialize array of bands, guesses left, and flag to break out
@@ -308,7 +272,7 @@ function musicGuesser() {
   do {
 
     // prompt for favorite band
-    var guessBand = prompt("What/who is one of my top 10 bands/musicians? " + bandGuessesLeft + " guesses remaining. Capitalization and formatting matter!");
+    var guessBand = prompt("What/who is one of my top 10 bands/musicians? Refer to the list below." + bandGuessesLeft +  " guesses remaining. Capitalization and formatting matter!");
     console.log("guessed band name: " + guessBand);
 
     // lowercase input string for checking answer
@@ -420,4 +384,5 @@ musicGuesser();
 
 // display points earned out of total points
 alert("You earned " + scoreCounter + "/" + totalQuestions + " right.");
-console.log("score: " + scoreCounter + "/" + totalQuestions); 
+console.log("score: " + scoreCounter + "/" + totalQuestions);
+
